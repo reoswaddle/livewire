@@ -22,4 +22,11 @@
     <p>
         My favourite foods are: {{ implode(', ', $foods) }}
     </p>
+
+    <form action="#" wire:submit.prevent="resetTitle($event.target.innerText)">
+        <button> Pluto </button>
+    </form>
+    <br>
+    <button wire:click="$set('greeting', 'Howdy')"> Reset greeting shortcut example </button>
+
 </div>
