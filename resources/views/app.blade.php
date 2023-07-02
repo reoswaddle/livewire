@@ -8,8 +8,7 @@
 </head>
 <body>
 <div>
-    <livewire:binder />
-
+    @livewire('hook', ['name' => 'Leo'])
 </div>
 @livewireScripts
 </body>
