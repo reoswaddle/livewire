@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-    @livewire('hook', ['name' => 'Leo'])
+    @livewire('hello-world', ['name' => 'Leo'])
 </div>
 @livewireScripts
 </body>
