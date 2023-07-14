@@ -47,12 +47,13 @@
             </div>
             <div class="form-group mb-2">
                 <label for="marketingPref">Opt In Marketing</label>
-                <select wire:model="county" class="form-control" id="marketingPref" multiple>
+                <select wire:model="contactPreferences" class="form-control" id="marketingPref" multiple>
                     <option> sms </option>
                     <option> email </option>
                     <option> post </option>
                 </select>
             </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 </div>

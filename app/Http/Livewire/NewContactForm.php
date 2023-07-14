@@ -17,8 +17,15 @@ class NewContactForm extends Component
     public string $county = 'Dorset';
     public bool $marketingOptIn = true;
     public array $contactPreferences = ['email'];
+
     public function render()
     {
         return view('livewire.new-contact-form');
+    }
+
+    public function createContact(){
+
+       dd($this);
+
     }
 }
