@@ -9,6 +9,8 @@ class HelloWorld extends Component
 {
     public $contacts;
 
+    protected $listeners = ['foo' => '$refresh'];
+
     public function mount()
     {
         $this->contacts = Contact::all();
@@ -23,5 +25,10 @@ class HelloWorld extends Component
     {
         Contact::whereName($name)->first()->delete();
         $this->contacts = Contact::all();
+    }
+
+    public function refreshChildren()
+    {
+        $this->emit('refreshChildren');
     }
 }

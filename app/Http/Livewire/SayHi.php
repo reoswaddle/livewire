@@ -9,6 +9,8 @@ class SayHi extends Component
 {
     public $contact;
 
+    protected $listeners = ['refreshChildren' => '$refresh'];
+
     public function render()
     {
         return view('livewire.say-hi');
@@ -18,5 +20,10 @@ class SayHi extends Component
     public function mount(Contact $contact)
     {
         $this->contact = $contact;
+    }
+
+    public function emitFoo()
+    {
+        $this->emitUp('foo');
     }
 }
