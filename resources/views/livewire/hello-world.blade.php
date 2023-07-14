@@ -9,11 +9,11 @@
 
     {{ now() }}
 
-{{--        //does round trip to update its self--}}
-{{--only emits to the children--}}
+        {{--does round trip to update its self--}}
+        {{--only emits to the children--}}
         <button wire:click="refreshChildren"> refresh children</button>
 
-{{--        //js just makes single load of requests to refreshChildren method--}}
+        {{--//js just makes single load of requests to refreshChildren method--}}
         <button wire:click="$emit('refreshChildren')"> refresh children only</button>
 
 
