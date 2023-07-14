@@ -16,6 +16,13 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
+            $table->string('address_line_1');
+            $table->string('address_line_2')->nullable();
+            $table->string('city');
+            $table->string('county');
+            $table->string('postcode');
+            $table->boolean('marketing_opt_in');
+            $table->json('contact_preferences');
             $table->timestamps();
         });
     }
